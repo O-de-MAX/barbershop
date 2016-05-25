@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Барбершоп "Бородинский"</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner">
   <header class="main-header">
     <div class="container clearfix">
       <nav class="header-nav">
+        <a class="logo-header" href="index.html">
+          <img src="img/BORODINSKI Logo mini.png" width="111" height="24" alt="Barbershop">
+        </a>
         <ul>
-          <li class="logo-header">
-            <a href="#">
-              <img src="img/BORODINSKI Logo mini.png" width="111" height="24" alt="Barbershop">
-            </a>
-          </li>
           <li>
             <a href="#">Информация</a>
           </li>
@@ -22,10 +21,10 @@
             <a href="#">Новости</a>
           </li>
           <li>
-            <a href="#">Прайс-лист</a>
+            <a href="price.html">Прайс-лист</a>
           </li>
-          <li  class="aclive">
-            <a href="#">Магазин</a>
+          <li class="active">
+            <a>Магазин</a>
           </li>
           <li>
             <a href="#">Контакты</a>
@@ -37,23 +36,22 @@
       </div>
     </div>
   </header>
-  <main class="catalog-content">
-    <div class="container">
-      <h1 class="catalog-title">Средства для ухода</h1>
-      <div class="breadcrumbs">
-        <ul>
-          <li>
-            <a href="#">Главная</a>
-          </li>
-          <li>
-            <a href="#">Магазин</a>
-          </li>
-          <li>
-            Средства для ухода
-          </li>
-        </ul>
-      </div>
-      <div class="catalog-wrap clearfix">
+  <main class="container">
+    <div class="inner-page-title">
+      <h1 class="page-title">Средства для ухода</h1>
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">Магазин</a>
+        </li>
+        <li class="current">
+          Средства для ухода
+        </li>
+      </ul>
+    </div>
+      <div class="inner-content clearfix">
         <div class="filters">
           <form class="filters-form" action="#" method="post">
             <div class="filter-group brands">
@@ -172,7 +170,6 @@
           <a href="#">4</a>
         </div>
       </div>
-    </div>
   </main>
   <footer class="main-footer">
     <div class="container clearfix">
@@ -192,7 +189,7 @@
         <a class="btn social-btn social-btn-fb" href="#">Фэйсбук</a>
         <a class="btn social-btn social-btn-inst" href="#">Инстаграм</a>
       </section>
-      <section class="copyright-footer">
+      <section class="footer-copyright">
         <p>
           Разработано:
         </p>
