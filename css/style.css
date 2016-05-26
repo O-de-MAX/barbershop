@@ -7,7 +7,6 @@ body {
   line-height: 24px;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   text-transform: uppercase;
-  background: #000000 url("#") no-repeat center top; /* TODO: вставить самый большой фон */
   color: #ffffff;
 }
 .container {
@@ -20,9 +19,12 @@ body {
   display: table;
   clear: both;
 }
+.index-background {
+  background: #000000 url("../img/index_background.jpg") no-repeat center top;
+}
 .inner {
   color: #000000;
-  background-color: #f8f3f0; /* url("#") repeat;*/ /* TODO: вставить фон для страниц повторяющийся градиент */
+  background: #f8f3f0 url("../img/pattern_inner.jpg") repeat;
 }
 .main-header {
   margin-bottom: 60px;
@@ -109,11 +111,11 @@ body {
   left: 20px;
   width: 18px;
   height: 18px;
-  background: transparent url("#") no-repeat; /* TODO: вставить иконку входа через спрайт!!! добавить бэкграунд позишн для спрайта */
-  opacity: 0.3;
+  background: url("../img/icon-sprite.png") no-repeat;
+  background-position: -111px -5px;
 }
-.login::before:hover {
-  opacity: 1;
+.login:hover::before {
+  background-position: -139px -5px;
 }
 .login:hover {
   background-color: #242424;
@@ -168,8 +170,8 @@ body {
   margin-bottom: 35px;
   padding: 50px 80px;
   color: #000000;
-  background: url("#") no-repeat center,
-  #f8f5f2 url("#"); /* TODO: текстуру фона вставить и картинку с тенью (она первая) */
+  background: url("../img/icon-vertical.png") no-repeat center,
+  #f8f5f2 url("../img/pattern_index.jpg") repeat;
 }
 .index-content-left {
   float: left;
@@ -289,7 +291,7 @@ body {
   width: 100%;
 }
 
-/* стили внутренних страниц */
+/* стили внутренних страниц, прайс */
 
 .inner-page-title {
   margin-bottom: 55px;
@@ -369,7 +371,7 @@ body {
   font-size: 48px;
   line-height: 48px;
   text-align: center;
-  background: #f8f3f0; /* TODO: url("") repeat - добавить такой же фон, как у страницы */
+  background: #f8f3f0 url("../img/pattern_inner.jpg") repeat;
 }
 .big-heading::after {
   content: "";
@@ -436,12 +438,133 @@ body {
 .inner-column-right .page-text {
   padding-top: 60px;
 }
+
+/* стили внутренних страниц, товар */
+/* TODO:  */
+
+.catalog-gallery {
+  float: left;
+  width: 460px;  /*перепроверить по ФШ ширину*/
+}
+.gallery-image {
+  width: 460px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+.gallery-image img {
+  width: 460px;
+  height: 500px;
+}
+.gallery-images img {
+  width: 140;
+  height: 150;
+  margin-right: 17px;
+}
+.gallery-images img:last-child {
+  margin-right: 0;
+}
+
+.gallery-image img,
+.gallery-images img {
+  box-shadow: 0 0 15; /*цвет ргб*/
+}
+
+
+
+
+
+.catalog-feature {
+  float: right;
+  width: 300px; /*перепроверить по ФШ ширину*/
+}
+
+.feature-col-stock {
+  float: left;
+}
+
+.feature-col-art {
+  float: right;
+}
+
+
+
+.feature-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.feature-list li {
+  position: relative;
+  padding-left: 20px;
+}
+.feature-list li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}
+
+/* стили внутренних страниц, каталог */
+/* TODO:  */
+
+.filters {
+  float: left;
+  width: 170px;
+}
+.filters input {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.catalog-page {
+  float: right;
+  width: 700px;
+}
+.catalog-items {
+  box-sizing: border-box;
+  font-size: 0;
+  margin-left: -10px;
+  margin-right: -10px; /* TODO: перепроверить все отступы */
+}
+.catalog-item-wrap {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+.catalog-item {
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  font-size: 14px;
+  text-transform: none;
+  background-color: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.catalog-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
 .main-footer {
   margin-top: 65px;
   padding-top: 60px;
   padding-bottom: 40px;
   color: #ffffff;
-  background: #252525 url("#"); /* TODO: добавить фон-текстуру футера */
+  background: #252525 url("../img/pattern_footer.jpg") repeat;
 }
 .footer-contacts {
   float: left;
@@ -472,31 +595,28 @@ body {
   font-size: 0;
   vertical-align: top;
   text-decoration: none;
-  background: #000000 url("#") no-repeat center; /* TODO: добавить иконки соц сетей, спрайт и бэкграунд поизшн ниже, в том числе при наведении, они разные */
-  transition:
-    background-position 0.5s,
-    background-color 0.5s;
+  background: #000000 url("../img/icon-sprite.png") no-repeat center;
 }
 .social-btn:hover {
   background-color: #ffffff;
 }
 .social-btn-vk {
-
+  background-position: -159px 9px;
 }
 .social-btn-fb {
-
+  background-position: 10px 5px;
 }
 .social-btn-inst {
-
+  background-position: -38px 5px;
 }
 .social-btn-vk:hover {
-
+  background-position: -193px 9px;
 }
 .social-btn-fb:hover {
-
+  background-position: -12px 5px;
 }
 .social-btn-inst:hover {
-
+  background-position: -69px 5px;
 }
 .footer-copyright {
   float: right;
