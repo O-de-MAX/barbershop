@@ -74,7 +74,6 @@ body {
 }
 .header-nav .active {
   position: relative;
-
   background-color: none;
 }
 .header-nav .active::after {
@@ -195,7 +194,6 @@ body {
   margin: 0;
   padding: 0;
   padding-right: 35px;
-
   list-style: none;
 }
 .news-preview li {
@@ -255,7 +253,6 @@ body {
 .gallery .btn {
   position: absolute;
   bottom: 0;
-
   width: 140px;
   margin: 0;
 }
@@ -290,9 +287,7 @@ body {
   clear: both;
   width: 100%;
 }
-
 /* стили внутренних страниц, прайс */
-
 .inner-page-title {
   margin-bottom: 55px;
 }
@@ -300,7 +295,6 @@ body {
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
-
   font-size: 30px;
   line-height: 42px;
 }
@@ -321,7 +315,6 @@ body {
   right: 18px;
   width: 8px;
   height: 8px;
-
   background-color: #000000;
   transform: rotate(45deg);
 }
@@ -384,7 +377,6 @@ body {
 .custom-list-1 {
   margin: 14px 0;
   padding: 0;
-
   list-style: none;
 }
 .custom-list-1 li {
@@ -438,13 +430,10 @@ body {
 .inner-column-right .page-text {
   padding-top: 60px;
 }
-
 /* стили внутренних страниц, товар */
-/* TODO:  */
-
 .catalog-gallery {
   float: left;
-  width: 460px;  /*перепроверить по ФШ ширину*/
+  width: 460px;
 }
 .gallery-image {
   width: 460px;
@@ -463,33 +452,30 @@ body {
 .gallery-images img:last-child {
   margin-right: 0;
 }
-
 .gallery-image img,
 .gallery-images img {
   box-sizing: border-box;
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
 }
-
-
-
-
-
 .catalog-feature {
   float: right;
-  width: 300px; /*перепроверить по ФШ ширину*/
+  width: 390px;
 }
-
 .feature-col-stock {
   float: left;
 }
-
 .feature-col-art {
   float: right;
 }
-
-
-
+.catalog-feature .price-group {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.feature-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
 .feature-list {
   margin: 0;
   padding: 0;
@@ -509,10 +495,7 @@ body {
   background-color: #000000;
   transform: rotate(45deg);
 }
-
 /* стили внутренних страниц, каталог */
-/* TODO:  */
-
 .filters {
   float: left;
   width: 170px;
@@ -530,20 +513,21 @@ body {
   margin-top: 0;
   font-size: 24px;
 }
-
 .filter-group input[type="checkbox"],
 .filter-group input[type="radio"] {
   display: none;
 }
-
 .filter-group label {
+  font-weight: 700;
   display: block;
   position: relative;
   line-height: 20px;
   cursor: pointer;
   padding: 8px 0 9px 40px;
 }
-
+.filter-group label:hover {
+  color: #663d15;
+}
 .filter-group label::before {
   content: "";
   position: absolute;
@@ -553,29 +537,24 @@ body {
   height: 20px;
   background: url("../images/filter-sprite.png") no-repeat center;
 }
-
 .brands-filter label::before {
   background-position: -10px -10px;
 }
 input[type="checkbox"]:checked + .brands-filter-checkbox::before {
   background-position: -50px -10px;
 }
-
 .product-filter label::before {
   background-position: -90px -10px;
 }
-
 input[type="radio"]:checked + .product-filter-radio::before {
   background-position: -130px -10px;
 }
-
 .filter-group.brands {
   margin-bottom: 46px;
 }
 .filter-group.products {
   margin-bottom: 40px;
 }
-
 .catalog-page {
   float: right;
   width: 700px;
@@ -584,7 +563,7 @@ input[type="radio"]:checked + .product-filter-radio::before {
   box-sizing: border-box;
   font-size: 0;
   margin-left: -10px;
-  margin-right: -10px; /* TODO: перепроверить все отступы */
+  margin-right: -10px;
 }
 .catalog-item-wrap {
   box-sizing: border-box;
@@ -603,12 +582,13 @@ input[type="radio"]:checked + .product-filter-radio::before {
   overflow: hidden;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
 }
-
+.catalog-item:hover {
+  box-shadow: 0 0 25px 5px rgba(0, 1, 1, 0.2);
+}
 .catalog-item img {
   max-width: 100%;
   height: auto;
 }
-
 .catalog-item-text {
   padding: 15px;
   padding-top: 5px;
@@ -641,15 +621,11 @@ input[type="radio"]:checked + .product-filter-radio::before {
   padding-right: 15px;
   margin-right: 0;
 }
-
-/* TODO: прописать стили для наведения и клика */
-
 .paginator {
   width: 320px;
   margin-top: 25px;
   text-align: left;
 }
-
 .paginator a {
   display: inline-block;
   height: 42px;
@@ -665,14 +641,13 @@ input[type="radio"]:checked + .product-filter-radio::before {
   color: #ffffff;
   margin-right: 6px;
 }
-
+.paginator a:hover {
+  background-color: #663d15;
+}
 .paginator .current {
   background-color: #ffffff;
   color: #000000;
 }
-
-/* TODO: прописать стили для пагинатора */
-
 .main-footer {
   margin-top: 65px;
   padding-top: 60px;
@@ -736,7 +711,6 @@ input[type="radio"]:checked + .product-filter-radio::before {
 .social-btn-inst:hover {
   background-position: -69px 5px;
 }
-
 .footer-copyright {
   float: right;
   max-width: 180px;
@@ -744,7 +718,6 @@ input[type="radio"]:checked + .product-filter-radio::before {
 .footer-copyright p {
   margin: 0;
   margin-bottom: 15px;
-
   text-align: center;
 }
 .footer-copyright .btn {
@@ -753,4 +726,189 @@ input[type="radio"]:checked + .product-filter-radio::before {
 .footer-copyright .btn:hover {
   color: #000000;
   background-color: #ffffff;
+}
+/*всплывающие формы*/
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+.modal-content-login {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  width: 300px;
+  margin-left: -230px;
+  padding: 50px 80px;
+  color: #000000;
+  background: #f8f3f0 url("../images/pattern_inner.jpg") repeat;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+  display: none;
+}
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-content-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 42px;
+}
+.modal-content-login p {
+  margin: 0;
+  margin-bottom: 14px;
+}
+.modal-content-login .modal-login-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.modal-login-form input[type="text"],
+.modal-login-form input[type="password"] {
+  width: 241px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+  outline: none;
+}
+.modal-login-form input:focus {
+  border-color: #663d15;
+}
+.modal-login-form input.modal-icon-user {
+  background-image: url("../images/modal-icon-user.png");
+  background-repeat: no-repeat;
+  background-position: 270px 15px;
+}
+.modal-login-form input.modal-icon-password {
+  background-image: url("../images/modal-icon-pass.png");
+  background-repeat: no-repeat;
+  background-position: 270px 12px;
+}
+.modal-login-form .restore {
+  float: right;
+  color: #000000;
+}
+.modal-btn {
+  width: 100%;
+  margin-top: 15px;
+}
+.modal-login-checkbox input[type="checkbox"] {
+  display: none;
+}
+.modal-login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.modal-login-checkbox:hover {
+  color: #663d15;
+}
+.modal-login-checkbox input[type="checkbox"] + .modal-checkbox-indicator {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000000;
+}
+.modal-login-checkbox input[type="checkbox"]:checked + .modal-checkbox-indicator::before,
+.modal-login-checkbox input[type="checkbox"]:checked + .modal-checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+.modal-login-checkbox input[type="checkbox"]:checked + .modal-checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+.modal-login-checkbox input[type="checkbox"]:checked + .modal-checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20;
+  margin-top: -280px;
+  margin-left: -390px;
+  width: 766px;
+  height: 561px;
+  background: #e9e5dc url("../images/map.jpg");
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+  display: none;
+}
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
